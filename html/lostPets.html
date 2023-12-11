@@ -3,65 +3,116 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
+    <style>
+        .lostpetsslide{
+        position:fixed;
+        top:100px;
+        
+        left:50%;
+        }
+        #pin{
+	    position:absolute;
+	    visibility: hidden;
+	    z-index: 1;
+        }   
+        .map{
+        position:fixed;
+        top:110px;
+        left:20%; 
+        }
+    </style>
 </head>
 
 <body>
-    <!--Dropdown buttons for each of the main topics of our website in the navigation bar, with the links inside each web page included.-->
-    <div class="navigationbar">
-        <a href="../index.html">Home</a>
-        <div class="ddown">
-            <button class="dropbutton">Adoption
-            </button>
-            <div class="ddown-stuff">
-                <a href="browsePets.html">Browse Pets</a>
-                <a href="howToAdopt.html">How To Adopt</a>
-                <a href="adoptSuccesses.html">Successful Adoptions</a>
-                <a href="adoptLocation.html">Adoption Centers</a>
-            </div>
-        </div>
-        <div class="ddown">
-            <button class="dropbutton">Resources
-            </button>
-            <div class="ddown-stuff">
-                <a href="volunteer.html">Volunteering</a>
-                <a href="petCare.html">Pet Care</a>
-                <a href="petFriendlyServices.html">Pet-Friendly Services</a>
-                <a href="petInsurance.html">Pet Insurance</a>
-                <a href="petBehaviourTips.html">Pet Behavior </a>
-            </div>
-        </div>
-        <div class="ddown">
-            <button class="dropbutton">More
-            </button>
-            <div class="ddown-stuff">
-                <a href="eventsPets.html">Events for pets</a>
-                <a href="">Lost Pets</a>
-                <a href="petMemorial.html">Pet Memorial</a>
-                <a href="petSell.html">Selling pets</a>
+    <nav>
+        <ul >
+            <li><a href="index.html">Home</a></li>
 
-            </div>
-        </div>
-        <div class="ddown">
-            <button class="dropbutton">Technical
-            </button>
-            <div class="ddown-stuff">
-                <a href="aboutUs.html">About Us</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contactUs.html">Contact Us</a>
-            </div>
-        </div>
-    </div>
-    <header>
-        <h1>Browse Available Pets</h1>
-        <!-- Navigation links can be added here -->
-    </header>
-    <main>
-        <!-- Pet listings and filters go here -->
-    </main>
-    <footer>
-        <!-- Footer content goes here -->
-    </footer>
-    <!-- Add your JavaScript link here -->
+            <li class="popup"><a href="">Adoption</a>
+                
+                <ul class="dropdown">
+                    <li><a href="browsePets.html">Browse Pets</a></li>
+                    <li><a href="howToAdopt.html">How To Adopt</a></li>
+                    <li> <a href="adoptSuccesses.html">Successful Adoptions</a></li>
+                    <li><a href="adoptLocation.html">Adoption Centers</a></li>
+            </ul>
+            </li>
+
+            <li class="popup"><a href="">Resources</a>
+            <ul class="dropdown">
+                <li><a href="volunteer.html">Volunteering</a></li>
+                <li><a href="petCare.html">Pet Care</a></li>
+                <li><a href="petFriendlyServices.html">Pet-Friendly Services</a></li>
+                <li> <a href="petInsurance.html">Pet Insurance</a></li>
+                <li><a href="petBehaviourTips.html">Pet Behavior </a></li>
+            </ul></li>
+
+            <li class="popup"><a href="">More</a>
+                <ul class="dropdown">
+                    <li>  <a href="eventsPets.html">Events for pets</a></li>
+                    <li>    <a href="lostPets.html">Lost Pets</a></li>
+                    <li><a href="petMemorial.html">Pet Memorial</a></li>
+                    <li> <a href="petSell.html">Selling pets</a> </li>   
+                </ul></li>
+
+                <li class="popup"><a href="">Technical</a>
+                    <ul class="dropdown">
+                        <li> <a href="aboutUs.html">About Us</a></li>
+                        <li> <a href="faq.html">FAQ</a></li>
+                        <li> <a href="contactUs.html">Contact Us</a></li>
+                    </ul></li>
+
+            </ul></nav>
+            <div class="lostpetsslide">
+                <ul>
+                        <li class="browseitem"><span class="xcoor" >150</span> <span class="ycoor">250</span><img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" ></li>
+                        <li class="browseitem"><span class="xcoor" > 50</span> <span class="ycoor">350</span><img class="petEx" src="../images/pexels-photo-3790942.jpeg" ></li>
+                        <li class="browseitem"><span class="xcoor" >550</span> <span class="ycoor">150</span><img class="petEx" src="../images/pexels-photo-7474348.jpeg" ></li>
+                    </ul>
+                </div>
+                
+                <div class="map">
+                    <img src="../images/map.jpg" >
+                    <img src="../images/pin.png" id="pin">
+                </div>
+            <script>
+                var BPSitems=document.getElementsByClassName("browseitem");
+                var BPSindex=0;
+               
+                var slideshow=function(){
+                for(var i=0;i<BPSitems.length;i++){
+                    BPSitems[i].style.display="none";
+                }
+                if(BPSindex+1==BPSitems.length){
+                    BPSindex=0;
+                }
+                else {
+                    BPSindex++;
+                }
+                    BPSitems[BPSindex].style.display="block";
+                    setTimeout(slideshow,3000);
+            
+            }
+            slideshow();
+            var getPin=document.getElementById("pin");
+            var x=getElementsByClassName("xcoor")[0];
+            var y=getElementsByClassName("ycoor")[0];
+            var movePin=function(){
+                getPin.style.visibility="visible";
+                for(var i=0;i<BPSitems.length;i++){
+                x[BPSindex].innerHTML;
+                y[BPSindex].innerHTML;
+                getPin.style.top=x+ "px";
+                getpin.style.left=y+"px";
+                
+             }
+             setTimeout(movePin,3000);
+        }
+        movePin();
+
+       
+
+            </script>
 </body>
 
 </html>
