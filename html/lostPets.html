@@ -7,7 +7,6 @@
         .lostpetsslide{
         position:fixed;
         top:100px;
-        
         left:50%;
         }
         #pin{
@@ -65,9 +64,9 @@
             </ul></nav>
             <div class="lostpetsslide">
                 <ul>
-                        <li class="browseitem"><span class="xcoor" >150</span> <span class="ycoor">250</span><img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" ></li>
-                        <li class="browseitem"><span class="xcoor" > 50</span> <span class="ycoor">350</span><img class="petEx" src="../images/pexels-photo-3790942.jpeg" ></li>
-                        <li class="browseitem"><span class="xcoor" >550</span> <span class="ycoor">150</span><img class="petEx" src="../images/pexels-photo-7474348.jpeg" ></li>
+                        <li class="browseitem"><img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" ></li>
+                        <li class="browseitem"><img class="petEx" src="../images/pexels-photo-3790942.jpeg" ></li>
+                        <li class="browseitem"><img class="petEx" src="../images/pexels-photo-7474348.jpeg" ></li>
                     </ul>
                 </div>
                 
@@ -79,39 +78,39 @@
                 var BPSitems=document.getElementsByClassName("browseitem");
                 var BPSindex=0;
                
+                var getPin=document.getElementById("pin");
+        
+                var movePin=function(){
+                    getPin.style.visibility="visible";
+                    if(BPSindex==0){
+                        getPin.style.top=150+"px";
+                        getPin.style.left=100+"px";
+
+                    }
+                    else if(BPSindex==1){
+                        getPin.style.top=50+"px";
+                        getPin.style.left=200+"px";
+                    }
+                    else if(BPSindex==2){
+                        getPin.style.top=350+"px";
+                        getPin.style.left=150+"px";
+                    }
+                }
                 var slideshow=function(){
-                for(var i=0;i<BPSitems.length;i++){
-                    BPSitems[i].style.display="none";
-                }
-                if(BPSindex+1==BPSitems.length){
-                    BPSindex=0;
-                }
-                else {
-                    BPSindex++;
-                }
+                    for(var i=0;i<BPSitems.length;i++){
+                        BPSitems[i].style.display="none";
+                    }
+                    if(BPSindex+1==BPSitems.length){
+                     BPSindex=0;
+                    }
+                    else {
+                     BPSindex++;
+                    }
                     BPSitems[BPSindex].style.display="block";
                     setTimeout(slideshow,3000);
-            
-            }
-            slideshow();
-            var getPin=document.getElementById("pin");
-            var x=getElementsByClassName("xcoor")[0];
-            var y=getElementsByClassName("ycoor")[0];
-            var movePin=function(){
-                getPin.style.visibility="visible";
-                for(var i=0;i<BPSitems.length;i++){
-                x[BPSindex].innerHTML;
-                y[BPSindex].innerHTML;
-                getPin.style.top=x+ "px";
-                getpin.style.left=y+"px";
-                
-             }
-             setTimeout(movePin,3000);
-        }
-        movePin();
-
-       
-
+                    movePin();
+                }
+                slideshow();
             </script>
 </body>
 
