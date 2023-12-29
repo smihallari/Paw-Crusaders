@@ -5,23 +5,49 @@ body {
 }
 nav> ul{
     list-style-type: none;
-    display:flex;
+    display:flex;   
+    /*flex, so my list stays compact in a row and doesn't auto-adjust .*/
 }
 
 nav>ul>li{
-    margin-left:5px;
+    padding-right:60px;
+    position:relative;/* so the list appears below the li hovered.*/
+    display: inline-block;/*fixes a bug with long text in a li overflowing down*/
+ 
 }
-
+nav>ul>li>ul{
+    position:absolute;
+    left:0;
+    flex-direction: column;
+    /*this piece of code makes it so the ul inside the li stays immediately on the left,
+    so that the dropdown menu looks neater*/
+}
+nav>ul>li>ul>li>a{
+    text-decoration: none;
+    color:black;
+    border:1px solid black;
+    background-image: url('../images/pexels-scott-webb-2824173.jpg');
+    /*styling of the links to the pages*/
+    padding:10px 0px;
+   white-space: pre;
+}
+nav>ul>li>ul>li{
+    box-sizing: border-box;
+    min-width: 100px !important;
+   margin-top:22px;
+    
+    
+}
 nav>ul>li>a{
 color:black;
 text-decoration: none;
 }
 #space{
-    padding-top:50px;
+    padding-top:50px; /* the top doesn't get obstructed by the nav*/
     text-align:center;
 }
 nav:hover{
-    opacity: 100%;
+    opacity: 100%; /* So when we hover over the nav it is completely visible */
 }
 
 nav {
@@ -34,44 +60,34 @@ nav {
     list-style-type: none;
     background-color: turquoise;
     margin:10px;
-    width:30%;
-    
+    width:500px;
+    height:50px;
+    /*nav styling*/
 }
-
-
 .popup:hover > .dropdown{
-    display:block;
+    display:block; /* so the menu becoems visible when we hover over it*/
 }
 
 .dropdown {
- display:none;
+    display:none;
     list-style-type: none;
+    text-indent: -2.5em;
     text-decoration: none;
     color:purple;
-    
+     /*the menu, primarily invisible, and using display doesnt take up space, then text adjustments*/
 }
-.petEx{
-    height:400px;
-    width:550px;
-}
+
 .xcoor{
     display:none;
-
+/*get the x coordinte for the slideshow, doesnt need to be visible*/
 }
 .ycoor{
     display:none;
+    /*get the y coordinte for the slideshow, doesnt need to be visible*/
+}
+.browsepetsslide{
+    display:inline-block; /*so the div doesn't take up the entire row*/
 }
 
-
-.upbutton{
-    position:fixed;
-    bottom:70px;
-    opacity:50%;
-    right:10px;
-    border:none;
-}
-.upbutton:hover{
-    opacity:100%;
-}
 
 
