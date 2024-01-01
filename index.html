@@ -4,14 +4,51 @@
         <link rel="stylesheet" type="text/css" href="./other/mystyle.css">
         <style>
     .petEx{
-        padding-top:50px;
-        height:400px;
+        margin-top:-10px;
+        height:380px;
         width:550px;
+        border-radius: 50px;
+        
+
+    }
+
+    .clickbrowse{
+        display:flex;
+        position:absolute;
+        top:406px;
+        left:385px;
+        z-index:1;
+        background-color: #f065f0;
+        width:550px;
+        height:50px;
+        justify-content: space-between;
+        
+        border-end-start-radius: 50px;
+        border-end-end-radius: 50px;
+    }
+    .button{
+        margin-top:5px;
+        margin-right:20px;
+        font-size: 20px;
+        width:150px;
+        height:40px;
+        border-radius: 20px;
+    }
+   .browsepetsslide
+    {  background: linear-gradient(to right, transparent, 40%, purple, 60%, transparent);;
+        z-index:-1;       
+        content:"";
+
+    }
+    
+    #browsepara{
+        margin-top:5px;
+        margin-left:20px;
     }
         </style>
     </head>
     <body>
-        <a id="top"></a>
+        
         <nav>
         <ul >
             <li><a href="index.html">Home</a></li>
@@ -19,10 +56,12 @@
             <li class="popup"><a href="">Adoption</a>
                 
                 <ul class="dropdown">
-                    <li><a href="html/browsePets.html">    Browse Pets</a></li>
+                    
+                    <li><a href="html/browsePets.html">Browse Pets   </a></li>
                     <li><a href="html/howToAdopt.html">How To Adopt</a></li>
-                    <li> <a href="html/adoptSuccesses.html">Success Stories</a></li>
-                    <li><a href="html/adoptLocation.html">Adoption Centers</a></li>
+                    <li> <a href="html/adoptSuccesses.html">Successful &nbsp;&nbsp;Adoptions</a></li>
+                    <li><a href="html/adoptLocation.html">Adoption &nbsp;&nbsp;Centers</a></li>
+               
             </ul>
             </li>
 
@@ -30,7 +69,7 @@
             <ul class="dropdown">
                 <li><a href="html/volunteer.html">Volunteering</a></li>
                 <li><a href="html/petCare.html">Pet Care</a></li>
-                <li><a href="html/petFriendlyServices.html">FriendlyServices</a></li>
+                <li><a href="html/petFriendlyServices.html">Pet Friendly &nbsp;&nbsp;Services</a></li>
                 <li> <a href="html/petInsurance.html">Pet Insurance</a></li>
                 <li><a href="html/petBehaviourTips.html">Pet Behavior </a></li>
             </ul></li>
@@ -51,13 +90,14 @@
                     </ul></li>
 
             </ul></nav>
-                
+                <div id="space"></div>
             <div class="browsepetsslide">
                 <a href="html/browsePets.html"><ul>
                         <li class="browseitem"><img class="petEx" src="images/free-photo-of-dogs-for-adoption.jpeg" ></li>
                         <li class="browseitem"><img class="petEx" src="images/pexels-photo-3790942.jpeg" ></li>
                         <li class="browseitem"><img class="petEx" src="images/pexels-photo-7474348.jpeg" ></li>
                     </ul></a>
+                <span class="clickbrowse"> <p1 id="browsepara"> Browse through all pets that have been submitted for<br> adoption. Help us find our pals a new home!</p1><button class="button" onclick="window.location.href='html/browsePets.html'">Browse Pets</button></span>
                 </div>
             <script>
                 var BPSitems=document.getElementsByClassName("browseitem");
@@ -74,7 +114,9 @@
                     BPSindex++;
                 }
                     BPSitems[BPSindex].style.display="block";
-                    setTimeout(slideshow,3000);
+                
+
+                    setTimeout(slideshow,6000);
             
             }
             slideshow();

@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: #9fa5ba;
     margin:auto 0 ;
     
 }
@@ -7,43 +7,52 @@ nav> ul{
     list-style-type: none;
     display:flex;   
     /*flex, so my list stays compact in a row and doesn't auto-adjust .*/
+    
 }
 
 nav>ul>li{
-    padding-right:60px;
+    padding-right:40px;
     position:relative;/* so the list appears below the li hovered.*/
     display: inline-block;/*fixes a bug with long text in a li overflowing down*/
- 
+    
 }
 nav>ul>li>ul{
     position:absolute;
-    left:0;
-    flex-direction: column;
+    width:65px;
+    
     /*this piece of code makes it so the ul inside the li stays immediately on the left,
     so that the dropdown menu looks neater*/
 }
 nav>ul>li>ul>li>a{
     text-decoration: none;
     color:black;
-    border:1px solid black;
-    background-image: url('../images/pexels-scott-webb-2824173.jpg');
+    padding-left:40px;
     /*styling of the links to the pages*/
-    padding:10px 0px;
-   white-space: pre;
+
+
+}
+nav>ul>li>ul>li:first-child{
+    margin-top:15px;/*so the dropdown menu is below the nav bar*/
+}
+
+nav>ul>li>ul>li:hover{
+    background-color: #5a81bf;
 }
 nav>ul>li>ul>li{
-    box-sizing: border-box;
-    min-width: 100px !important;
-   margin-top:22px;
-    
-    
+    background-color: #3399ff;
+    border:1px solid black;
+    margin-left: -55px;
+    padding-right:-10px; text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 nav>ul>li>a{
 color:black;
+padding-left:5px;
 text-decoration: none;
 }
 #space{
-    padding-top:50px; /* the top doesn't get obstructed by the nav*/
+    padding-top:70px; /* the top doesn't get obstructed by the nav*/
     text-align:center;
 }
 nav:hover{
@@ -54,13 +63,13 @@ nav {
     z-index: 1;
     visibility: visible;
     position: fixed;
-    left:33%;
+    left:29.3%;
     top:0px;
     opacity: 40%;
     list-style-type: none;
-    background-color: turquoise;
+    background-color: #3b5998;
     margin:10px;
-    width:500px;
+    width:550px;
     height:50px;
     /*nav styling*/
 }
@@ -76,17 +85,14 @@ nav {
     color:purple;
      /*the menu, primarily invisible, and using display doesnt take up space, then text adjustments*/
 }
-
-.xcoor{
+.xcoor,.ycoor{
     display:none;
-/*get the x coordinte for the slideshow, doesnt need to be visible*/
-}
-.ycoor{
-    display:none;
-    /*get the y coordinte for the slideshow, doesnt need to be visible*/
 }
 .browsepetsslide{
-    display:inline-block; /*so the div doesn't take up the entire row*/
+    display:flex; /*so the div doesn't take up the entire row*/
+    justify-content:center;
+    background-color: purple;
+    height:400px;
 }
 
 
