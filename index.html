@@ -8,21 +8,17 @@
         height:380px;
         width:550px;
         border-radius: 50px;
-        
-
     }
-
     .clickbrowse{
         display:flex;
         position:absolute;
         top:406px;
-        left:385px;
+        left:377px;
         z-index:1;
         background-color: #f065f0;
         width:550px;
         height:50px;
         justify-content: space-between;
-        
         border-end-start-radius: 50px;
         border-end-end-radius: 50px;
     }
@@ -36,16 +32,15 @@
     }
    .browsepetsslide
     {  background: linear-gradient(to right, transparent, 40%, purple, 60%, transparent);;
-        z-index:-1;       
+        z-index:0;       
         content:"";
-
     }
-    
     #browsepara{
         margin-top:5px;
         margin-left:20px;
     }
         </style>
+        <script src="./other/button.js" defer></script>
     </head>
     <body>
         
@@ -59,7 +54,7 @@
                     
                     <li><a href="html/browsePets.html">Browse Pets   </a></li>
                     <li><a href="html/howToAdopt.html">How To Adopt</a></li>
-                    <li> <a href="html/adoptSuccesses.html">Successful &nbsp;&nbsp;Adoptions</a></li>
+                    <li><a href="html/adoptSuccesses.html">Successful &nbsp;&nbsp;Adoptions</a></li>
                     <li><a href="html/adoptLocation.html">Adoption &nbsp;&nbsp;Centers</a></li>
                
             </ul>
@@ -99,7 +94,8 @@
                     </ul></a>
                 <span class="clickbrowse"> <p1 id="browsepara"> Browse through all pets that have been submitted for<br> adoption. Help us find our pals a new home!</p1><button class="button" onclick="window.location.href='html/browsePets.html'">Browse Pets</button></span>
                 </div>
-            <script>
+              <div style="height:5000px"></div>
+            <script>    
                 var BPSitems=document.getElementsByClassName("browseitem");
                 var BPSindex=0;
                

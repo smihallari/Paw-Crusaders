@@ -4,13 +4,16 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <style>
+        body{
+            background-color:#9dade7 !important;
+        }
         .petEx{
-        position:fixed;
+        position:absolute;
         height:250px;
         width:450px;
         }
         .lostpetsslide{
-        position:fixed;
+        position:absolute;
         top:100px;
         left:700px;
         }
@@ -28,18 +31,19 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10px;
             position:absolute;
-            left:700px;
-            top:400px;
+            left:750px;
+            top:365px;
         }
         .map{
-        position:fixed;
+        position:absolute;
         top:110px;
         left:20px; 
         }
     </style>
+    <script src="../other/button.js" defer></script>
 </head>
 
-<body>
+<body style="background:#a4b0da ;">
     <nav>
         <ul >
             <li><a href="../index.html">Home</a></li>
@@ -96,7 +100,7 @@
                     <img src="../images/pin.png" id="pin">
                 </div>
                 <div>
-                    <h1 id="space">
+                    <h1 id="space" style="padding-top:50px">
                         Help us find a lost pet.
                     </h1>
                 </div>
@@ -109,6 +113,7 @@
                     <li>Owner Phone: </li><li id="Phone"></li>
                 </ul>
                 </span>
+                <div style="height:50px"></div>
             <script>
                 var BPSitems=document.getElementsByClassName("browseitem");
                 var BPSindex=0;

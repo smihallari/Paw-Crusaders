@@ -1,8 +1,27 @@
 body {
-    background-color: #9fa5ba;
     margin:auto 0 ;
+    background: linear-gradient(to bottom,white, #5a76de);;
     
 }
+nav {
+    z-index: 3;
+    visibility: visible;
+    position: fixed;
+    left:29.3%;
+    top:0px;
+    opacity: 40%;
+    list-style-type: none;
+    background-color: #3b5998;
+    margin:10px;
+    width:550px;
+    height:50px;
+    border-radius: 20px;
+    /*nav styling*/
+}
+nav:hover{
+    opacity: 100%; /* So when we hover over the nav it is completely visible */
+}
+
 nav> ul{
     list-style-type: none;
     display:flex;   
@@ -16,6 +35,11 @@ nav>ul>li{
     display: inline-block;/*fixes a bug with long text in a li overflowing down*/
     
 }
+nav>ul>li>a{
+    color:black;
+    padding-left:5px;
+    text-decoration: none;
+    }
 nav>ul>li>ul{
     position:absolute;
     width:65px;
@@ -23,6 +47,16 @@ nav>ul>li>ul{
     /*this piece of code makes it so the ul inside the li stays immediately on the left,
     so that the dropdown menu looks neater*/
 }
+nav>ul>li>ul>li{
+    background-color: #3399ff;
+    border:1px solid black;
+    margin-left: -55px;
+    padding-right:-10px; text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    cursor:pointer;
+}
+
 nav>ul>li>ul>li>a{
     text-decoration: none;
     color:black;
@@ -38,41 +72,13 @@ nav>ul>li>ul>li:first-child{
 nav>ul>li>ul>li:hover{
     background-color: #5a81bf;
 }
-nav>ul>li>ul>li{
-    background-color: #3399ff;
-    border:1px solid black;
-    margin-left: -55px;
-    padding-right:-10px; text-align: center;
-    padding-top:10px;
-    padding-bottom:10px;
-}
-nav>ul>li>a{
-color:black;
-padding-left:5px;
-text-decoration: none;
-}
+
 #space{
     padding-top:70px; /* the top doesn't get obstructed by the nav*/
     text-align:center;
 }
-nav:hover{
-    opacity: 100%; /* So when we hover over the nav it is completely visible */
-}
 
-nav {
-    z-index: 1;
-    visibility: visible;
-    position: fixed;
-    left:29.3%;
-    top:0px;
-    opacity: 40%;
-    list-style-type: none;
-    background-color: #3b5998;
-    margin:10px;
-    width:550px;
-    height:50px;
-    /*nav styling*/
-}
+
 .popup:hover > .dropdown{
     display:block; /* so the menu becoems visible when we hover over it*/
 }
