@@ -6,8 +6,8 @@ body {
 nav {
     z-index: 3;
     visibility: visible;
-    position: fixed;
-    left:29.3%;
+    position: sticky;
+    left:36.65%;
     top:0px;
     opacity: 40%;
     list-style-type: none;
@@ -24,7 +24,8 @@ nav:hover{
 
 nav> ul{
     list-style-type: none;
-    display:flex;   
+    display:flex;
+    padding-top:15px;   
     /*flex, so my list stays compact in a row and doesn't auto-adjust .*/
     
 }
@@ -94,12 +95,7 @@ nav>ul>li>ul>li:hover{
 .xcoor,.ycoor{
     display:none;
 }
-.browsepetsslide{
-    display:flex; /*so the div doesn't take up the entire row*/
-    justify-content:center;
-    background-color: purple;
-    height:400px;
-}
+
 
 
 
