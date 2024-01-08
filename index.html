@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: fit-content;">
 <head>
         <link rel="stylesheet" type="text/css" href="./other/mystyle.css">
         <style>
@@ -8,8 +8,7 @@
         height:380px;
         width:550px;
         border-radius: 50px;
-        
-       
+        /* margin-right:40px; */
     }
     .clickbrowse{
         display:flex;
@@ -19,7 +18,7 @@
         background-color: #f065f0;
         width:550px;
         height:50px;
-        margin-left:40px;
+        /* margin-left:40px; */
         justify-content: space-between;
         border-end-start-radius: 50px;
         border-end-end-radius: 50px;
@@ -32,6 +31,14 @@
         height:40px;
         border-radius: 20px;
     }
+    .button:hover{
+        cursor: pointer;
+    }
+    .successphoto{
+        height:400px;
+        border-radius: 200px;
+    }
+    
     .browsepetsslide{
     display:flex; 
     flex-direction: column;
@@ -46,6 +53,41 @@
     #browsepara{
         margin-top:5px;
         margin-left:25px;
+    }
+    #throwlist{
+        display:flex;
+        list-style: none;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+    div>ul>li{
+        float:left;
+        opacity:0;
+        transform: translateX(100%);
+        transition: transform 4s ease-in-out, opacity 1.5s ease-in-out
+    }
+    #sucpara{
+        
+        text-align: center;
+    }
+    div>ul>li>p{
+        padding:10px;
+        font-size:20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #scrollnum{
+        width:100%;
+        display:flex;
+        height:500px;
+        justify-content: space-evenly;
+    
+    }
+    .spannum{
+        font-size:50px;
+      
+    }
+    #space{
+        padding-top:10px;
     }
         </style>
         <script src="./other/button.js" defer></script>
@@ -95,14 +137,35 @@
             </ul></nav>
                 <div id="space"></div>
             <div class="browsepetsslide">
-                <a href="html/browsePets.html"><ul>
+                <a href="html/browsePets.html"><ul style="margin-top:0;margin-bottom:0;padding-left:0;padding-right: 0;">
                         <li class="browseitem"><img class="petEx" src="images/free-photo-of-dogs-for-adoption.jpeg" ></li>
                         <li class="browseitem"><img class="petEx" src="images/pexels-photo-3790942.jpeg" ></li>
                         <li class="browseitem"><img class="petEx" src="images/pexels-photo-7474348.jpeg" ></li>
                     </ul></a>
                 <span class="clickbrowse"> <p1 id="browsepara"> Browse through all pets that have been submitted for<br> adoption. Help us find our pals a new home!</p1><button class="button" onclick="window.location.href='html/browsePets.html'">Browse Pets</button></span>
                 </div>
-              <div style="height:500px"></div>
+                <h2 id="sucpara">Take a look at some happy adoption stories :)</h2>
+              <div>
+                <ul id="throwlist">
+                    <li class="throwli"><a href="html/adoptSuccesses.html">
+                       <img class="successphoto"  src="images/Leonardo_Diffusion_XL_i_want_to_have_a_picture_where_a_pet_is_1.jpg"> </a></li>
+                    <li class="throwli"><h4 style="font-size: 22px;">From Stray to Family:</h4><p>
+                        Abandoned and alone, a stray puppy named Jasper roamed the streets until a caring individual rescued her. Today, Jasper thrives in a loving home, reminding us that every pet deserves a chance at happiness.</p></li>
+                    <li class="throwli"><a href="html/adoptSuccesses.html">
+                        <img class="successphoto"  src="images/Leonardo_Diffusion_XL_i_want_to_have_a_picture_where_a_pet_is_2.jpg"></a></li>
+                    <li class="throwli"><h4 style="font-size: 22px;">Max's Journey to Love:</h4><p>
+                        Max, a senior dog, spent years overlooked until a kind soul decided to give him a chance. Despite his age, Max brought boundless energy and loyalty to his new home, proving that love knows no age.</p></li>
+                    <li class="throwli"><a href="html/adoptSuccesses.html">
+                        <img class="successphoto" src="images/Leonardo_Diffusion_XL_i_want_to_have_a_picture_where_a_pet_is_3.jpg"></a></li>
+                    <li class="throwli"><h4 style="font-size: 22px;">Twins' Second Chance:</h4><p>
+                        After months in a shelter, Luna and Lex found a forever home. Their new family saw past the shy exterior and discovered two playful, loving companions. Now, their days are filled with joy and endless tail wags.</p></li>
+            </ul>
+              </div>
+              <div id="scrollnum">
+                <span class="spannum">0</span>
+                <span class="spannum">0</span>
+                <span class="spannum">0</span>
+              </div>
             <script>    
                 var BPSitems=document.getElementsByClassName("browseitem");
                 var BPSindex=0;
@@ -124,8 +187,38 @@
             
             }
             slideshow();
-       
+            document.addEventListener("DOMContentLoaded",function(){
+                var throwListItem=document.querySelectorAll(".throwli");
+                throwListItem.forEach(function(li,index){
+                    li.style.transitionDelay= index+"s";});
+                    requestAnimationFrame(function(){
+                        throwListItem.forEach(function(li){
+                            li.style.opacity="1";
+                            li.style.transform="translateX(0)";
+                        });
+                    });
+                });
+                var num1=0;
+                var num2=0;
+                var num3=0;
+            
+            function increase(){
+            var divnum =document.getElementById("scrollnum");
+            var spannum=document.getElementsByClassName("spannum");
+            if(window.scrollY>300){
+                const myinterv=setInterval(function(){
+                spannum[0].textContent=num1+=4;
+                spannum[1].textContent=num2+=17;
+                spannum[2].textContent=num3+=78;
+                if(num1>=223){clearInterval(myinterv)}
+            },30);
+            window.removeEventListener('scroll',increase);}}
+     
+            window.addEventListener('scroll',increase);
+            
+            
 
+        
             </script>
     </body>
 </html>

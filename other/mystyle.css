@@ -1,18 +1,24 @@
 body {
     margin:auto 0 ;
-    background: linear-gradient(to bottom,white, #5a76de);;
-    
+    background: linear-gradient(to bottom,#d1d6ec, #5073f1);
+ 
+}
+html {
+    height: 100%;
+  }
+.cover{
+    height:cover !important;
 }
 nav {
     z-index: 3;
     visibility: visible;
     position: sticky;
-    left:36.65%;
+    
     top:0px;
     opacity: 40%;
     list-style-type: none;
     background-color: #3b5998;
-    margin:10px;
+    margin:auto;
     width:550px;
     height:50px;
     border-radius: 20px;
