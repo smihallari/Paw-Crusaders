@@ -109,7 +109,8 @@ nav>ul>li>ul>li:hover{
 }
 
 footer{
-    margin-top: auto;
+    margin-top:auto;
+    
     display:flex;
     background-color: rgb(54, 50, 50);
     width:100%;
@@ -121,6 +122,7 @@ footer{
 }
 .footerimg{
     height:40px;
+    
 }
 
 

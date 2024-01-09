@@ -48,6 +48,7 @@
     align-items:center;
     background-color: purple;
     height:400px;
+    margin:50px 0;
     background: linear-gradient(to right, transparent, 40%, purple, 60%, transparent);  
     content:"";
     }
@@ -110,10 +111,37 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:10px;
+        margin:50px;
     }
     #space{
         padding-top:10px;
+    }
+    #insurancediv{
+        /* height:300px; */
+        display:flex;
+        margin:50px;
+        justify-content:center;
+        align-items:center;
+    }
+    #ins1{
+        height:300px;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 75%, 90% 55%, 100% 30%, 100% 0)
+    }
+    #ins2{
+        height:300px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%,0 75%,10% 55%, 0 30%);
+        
+    }
+    #insspan{
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-left:-20px;
+        margin-right:-20px;
+        margin-top:20px;
+        z-index: 1;
+        color:white;
+        font-size: 20px;
     }
         </style>
         <script src="./other/button.js" defer></script>
@@ -187,25 +215,28 @@
                         After months in a shelter, Luna and Lex found a forever home. Their new family saw past the shy exterior and discovered two playful, loving companions. Now, their days are filled with joy and endless tail wags.</p></li>
             </ul>
               </div>
-              <span style="color:white;text-align: center;font-size:20px;-webkit-text-stroke: 0.6px black;
-        text-stroke: 1px black;padding-bottom:0"> <h2 style="background: linear-gradient(to right, transparent, 35%, #234ce0, 65%, transparent); ">Since the commencement of our initiative </h2></span>
+              <span style="padding-top:50px;color:white;text-align: center;font-size:20px;-webkit-text-stroke: 0.6px black; text-stroke: 1px black;padding-bottom:0"> 
+        <h2 style="background: linear-gradient(to right, transparent, 35%, #234ce0, 65%, transparent); ">Since the commencement of our initiative </h2></span>
               <div style="margin-top:-25px;" id="scrollnum">
                 <span class="spannum">0</span>
                 <span class="spannum">0</span>
                 <span class="spannum">0</span>
               </div>
               <div id="scrollinfo">
-                <span></span>
+               
                 <span class="spaninfo">pets found their home</span>
-                <span class="spaninfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lives impacted </span>
+                <span class="spaninfo">lives impacted </span>
                 <span class="spaninfo">people joined our initiative<br> to end pet selling</span>
               </div>
 
               <div id="voldiv">
                 <img id="volunteer" src="./images/Leonardo_Diffusion_XL_workingvolunteering_at_a_pet_shelter_1.jpg">
-                <p style="color:white;font-size: 30px; padding-left: 30px;">Wanna be the next volunteer to help <br>change a furry friend's life for the better? <br>Join today </p><button onclick="window.location.href='html/volunteer.html'" style=" background-color:#3f66f3; color:white;font-size: 30px;margin-top:75px;margin-left:-360px">here</button>
+                <p style="color:white;font-size: 30px; padding-left: 30px;">Wanna be the next volunteer to help <br>change a furry friend's life for the better? <br>Join today </p><button onclick="window.location.href='html/volunteer.html'" style=" background-color:#3f66f3;cursor: pointer; color:white;font-size: 30px;margin-top:75px;margin-left:-360px">here</button>
               </div>
-
+              <div id="insurancediv">
+                <img id="ins1" src="images/Leonardo_Diffusion_XL_image_for_a_pet_insurance_service_during_0.jpg"> <span id="insspan">Our pet insurance is the bridge that both  ensures your financial security<br> for unexpected vet expenses, and provides the best care for your pets' <br>well-being.&nbsp; &nbsp; &nbsp; &nbsp;  <a style="color:white" href="html/petInsurance.html">Visit our page for more!</a></span>
+                    <img id="ins2" src="images/Leonardo_Diffusion_XL_a_checked_checklist_for_insurance_servic_0.jpg">
+              </div>
 
 
 <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
@@ -250,7 +281,8 @@
             
             function increase(){
             var spannum=document.getElementsByClassName("spannum");
-            if(window.scrollY>250){
+            var scrollage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if(scrollage>15){
                 const myinterv=setInterval(function(){
                 spannum[0].textContent=num1+=4;
                 spannum[1].textContent=num2+=17;
