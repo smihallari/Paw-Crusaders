@@ -13,7 +13,6 @@ nav {
     z-index: 3;
     visibility: visible;
     position: sticky;
-    
     top:0px;
     opacity: 40%;
     list-style-type: none;
@@ -27,7 +26,14 @@ nav {
 nav:hover{
     opacity: 100%; /* So when we hover over the nav it is completely visible */
 }
-
+#logo{
+    height:130px;
+    float:right;
+    z-index:1;
+    position:sticky;
+    top:0px;
+    margin-left:-100%;
+}
 nav> ul{
     list-style-type: none;
     display:flex;
@@ -102,6 +108,19 @@ nav>ul>li>ul>li:hover{
     display:none;
 }
 
-
+footer{
+    margin-top: auto;
+    display:flex;
+    background-color: rgb(54, 50, 50);
+    width:100%;
+    height:50px;
+    justify-content: center;
+    color:white;
+    align-items: center;
+    
+}
+.footerimg{
+    height:40px;
+}
 
 
