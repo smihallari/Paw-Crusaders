@@ -19,9 +19,9 @@
         }
         
         #pin{
-	    position:absolute;
-	    visibility: hidden;
-	    z-index: 1;
+        position:absolute;
+        visibility: hidden;
+        z-index: 1;
         }   
         .map{
         float:right;
@@ -47,14 +47,6 @@
         span>ul{
             display: grid;
         }
-        
-
-    
-        
-        
-        
-        
-        
     </style>
 </head>
 
@@ -103,7 +95,6 @@
                 <ul>
                     
                     <li class="browseitem">
-                        
                         <span class="xcoor">150</span>
                         <span class="ycoor">200</span>
                         <img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" >
@@ -122,40 +113,30 @@
                 <img src="../images/map.jpg" >
                 <img src="../images/pin.png" id="pin">
                 </div>
-                <script>
-                   var BPSitems=document.getElementsByClassName("browseitem");
+        <script>
+            var BPSitems=document.getElementsByClassName("browseitem");
+            var getPin=document.getElementById("pin");
             var BPSindex=0;
-           
+            var BPSxcoor=document.getElementsByClassName("xcoor");
+                var BPSycoor=document.getElementsByClassName("ycoor");
             var slideshow=function(){
-            for(var i=0;i<BPSitems.length;i++){
-                BPSitems[i].style.display="none";
-            }
-            if(BPSindex+1==BPSitems.length){
-                BPSindex=0;
-            }
-            else {
-                BPSindex++;
-            }
-                BPSitems[BPSindex].style.display="block";
-                setTimeout(slideshow,3000);
-        
-        }
-        slideshow();
-        var getPin=document.getElementById("pin");
-        var x=getElementsByClassName("xcoor")[0];
-        var y=getElementsByClassName("ycoor")[0];
-        var movePin=function(){
-            getPin.style.visibility="visible";
-            for(var i=0;i<BPSitems.length;i++){
-            x[BPSindex].innerHTML;
-            y[BPSindex].innerHTML;
-            getPin.style.top=x+ "px";
-            getpin.style.left=y+"px";
-            
-         }
-         setTimeout(movePin,3000);
-    }
-    movePin();
+                    for(var i=0;i<BPSitems.length;i++){
+                        BPSitems[i].style.display="none";
+                    }
+                    if(BPSindex+1==BPSitems.length){
+                     BPSindex=0;
+                    }
+                    else {
+                     BPSindex++;
+                    }
+                    BPSitems[BPSindex].style.display="block";
+                    getPin.style.top=BPSxcoor[BPSindex].innerHTML+"px";
+                    getPin.style.left=BPSycoor[BPSindex].innerHTML+"px";
+                    getPin.style.visibility="visible";
+                    setTimeout(slideshow,1000);
+                    
+                }
+                slideshow();
            
         
                 </script>
