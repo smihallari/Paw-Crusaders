@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-
+    <html style="height:fit-content">
 <head>
     <title>Pet Friendly Servies</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
     <style>
+        .pageDescription{
+            text-align: center;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            border: 3px white double;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left:10%;
+            margin-right: 10%;
+            
+        }
         .petfriendly{
         float:left;
-        margin-top:90px;
+        margin-top:9%;
         
         
         
@@ -25,24 +36,24 @@
         }   
         .map{
         float:right;
-        margin-top:125px;
-        margin-right:100px;
-        margin-left:50px; 
+        
+        margin-right:8%;
+        margin-left:5%; 
         
         
         }
         .petEx{
         position:absolute;
-        height:300px;
+        height:350px;
         width:450px;
-        top:190px;
-        left: 100px;
+        left: 8%;
+        top: 62.5%;
         
         }
         .text{
-            position: fixed;
-            margin-top: 320px;
-            margin-left: 65px;
+            position: absolute;
+            margin-top: 16.5%;
+            margin-left: 5%;
         }
         span>ul{
             display: grid;
@@ -91,20 +102,64 @@
                     </ul></li>
 
             </ul></nav>
+            <div class="pageDescription">
+            <h1>PET FRIENDLY SERVICES</h1>
+            <p>
+                
+                Welcome to our dedicated page celebrating the wonderful
+                world of pet-friendly services! Here, we curate a collection
+                of offerings designed to enhance the lives of our beloved 
+                animal companions. From pet-friendly accommodations and
+                grooming services to health insurance options, we've 
+                gathered a variety of resources to cater to the diverse 
+                needs of pets and their owners. Whether you're seeking advice 
+                on training, looking for a cozy place to stay with your furry
+                friend, or exploring the latest in pet wellness, our page is your
+                go-to destination for all things pet-friendly. Join us in celebrating
+                the joy and companionship that pets bring to our lives, and discover a 
+                wealth of services that prioritize the well-being and happiness of our
+                four-legged family members.
+            </p>
+        </div>
+        
             <div class="petfriendly">
                 <ul>
                     
                     <li class="browseitem">
-                        <span class="xcoor">150</span>
-                        <span class="ycoor">200</span>
-                        <img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" >
-                        <span class="text">First pet friendly service</span>
+                        <span class="xcoor">550</span>
+                        <span class="ycoor">750</span>
+                        <img class="petEx" src="../images/petHotel.png" >
+                        <span class="text">ON Residence</span>
                         </li>
                     <li class="browseitem">
-                        <span class="xcoor">50</span>
-                        <span class="ycoor">150</span>
-                        <img class="petEx" src="../images/pexels-photo-3790942.jpeg" >
-                        <span class="text">Second pet friendly service</span>
+                        <span class="xcoor">450</span>
+                        <span class="ycoor">850</span>
+                        <img class="petEx" src="../images/petAtVet.jpg" >
+                        <span class="text">Pet Care Center</span>
+                    </li>
+                    <li class="browseitem">
+                        <span class="xcoor">400</span>
+                        <span class="ycoor">750</span>
+                        <img class="petEx" src="../images/petSitter.jpg" >
+                        <span class="text">Thessaloniki Pet Sitting</span>
+                    </li>
+                    <li class="browseitem">
+                        <span class="xcoor">510</span>
+                        <span class="ycoor">950</span>
+                        <img class="petEx" src="../images/petHotel1.jpg" >
+                        <span class="text">ONOMA Hotel</span>
+                    </li>
+                    <li class="browseitem">
+                        <span class="xcoor">600</span>
+                        <span class="ycoor">1150</span>
+                        <img class="petEx" src="../images/petPersonalTrainer.jpg" >
+                        <span class="text">Dog Trainer School</span>
+                    </li>
+                    <li class="browseitem">
+                        <span class="xcoor">400</span>
+                        <span class="ycoor">1100</span>
+                        <img class="petEx" src="../images/petRestaurant.jpg" >
+                        <span class="text">Panorama Bar&Restauranr</span>
                     </li>
                     
                 </ul>
@@ -113,6 +168,7 @@
                 <img src="../images/map.jpg" >
                 <img src="../images/pin.png" id="pin">
                 </div>
+           
         <script>
             var BPSitems=document.getElementsByClassName("browseitem");
             var getPin=document.getElementById("pin");
