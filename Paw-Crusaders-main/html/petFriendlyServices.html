@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pet Friendly Servies</title>
+    <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
+    <script src="../other/button.js" defer></script>
+    <style>
+        .petfriendly{
+        float:left;
+        margin-top:90px;
+        
+        
+        
+        color: turquoise;
+        
+        
+        
+        }
+        
+        #pin{
+	    position:absolute;
+	    visibility: hidden;
+	    z-index: 1;
+        }   
+        .map{
+        float:right;
+        margin-top:125px;
+        margin-right:100px;
+        margin-left:50px; 
+        
+        
+        }
+        .petEx{
+        position:absolute;
+        height:300px;
+        width:450px;
+        top:190px;
+        left: 100px;
+        
+        }
+        .text{
+            position: fixed;
+            margin-top: 320px;
+            margin-left: 65px;
+        }
+        span>ul{
+            display: grid;
+        }
+        
+
+    
+        
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <img id="logo" src="../images/Default_create_me_a_logo_for_my_pet_adopting_website_the_name_1_c86b53ab-5bf3-4d6d-b51b-7ed9afa81dab_0.png">
+    <nav>
+        <ul >
+            <li><a href="../index.html">Home</a></li>
+
+            <li class="popup"><a href="">Adoption</a>
+                
+                <ul class="dropdown">
+                    <li><a href="browsePets.html">Browse Pets</a></li>
+                    <li><a href="howToAdopt.html">How To Adopt</a></li>
+                    <li> <a href="adoptSuccesses.html">Successful Adoptions</a></li>
+                    <li><a href="adoptLocation.html">Adoption Centers</a></li>
+            </ul>
+            </li>
+
+            <li class="popup"><a href="">Resources</a>
+            <ul class="dropdown">
+                <li><a href="volunteer.html">Volunteering</a></li>
+                <li><a href="petCare.html">Pet Care</a></li>
+                <li><a href="petFriendlyServices.html">Pet-Friendly Services</a></li>
+                <li> <a href="petInsurance.html">Pet Insurance</a></li>
+                <li><a href="petBehaviourTips.html">Pet Behavior </a></li>
+            </ul></li>
+
+            <li class="popup"><a href="">More</a>
+                <ul class="dropdown">
+                    <li>  <a href="eventsPets.html">Events for pets</a></li>
+                    <li>    <a href="lostPets.html">Lost Pets</a></li>
+                    <li><a href="petMemorial.html">Pet Memorial</a></li>
+                    <li> <a href="petSell.html">Selling pets</a> </li>   
+                </ul></li>
+
+                <li class="popup"><a href="">Technical</a>
+                    <ul class="dropdown">
+                        <li> <a href="aboutUs.html">About Us</a></li>
+                        <li> <a href="faq.html">FAQ</a></li>
+                        <li> <a href="contactUs.html">Contact Us</a></li>
+                    </ul></li>
+
+            </ul></nav>
+            <div class="petfriendly">
+                <ul>
+                    
+                    <li class="browseitem">
+                        
+                        <span class="xcoor">150</span>
+                        <span class="ycoor">200</span>
+                        <img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" >
+                        <span class="text">First pet friendly service</span>
+                        </li>
+                    <li class="browseitem">
+                        <span class="xcoor">50</span>
+                        <span class="ycoor">150</span>
+                        <img class="petEx" src="../images/pexels-photo-3790942.jpeg" >
+                        <span class="text">Second pet friendly service</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="map">
+                <img src="../images/map.jpg" >
+                <img src="../images/pin.png" id="pin">
+                </div>
+                <script>
+                   var BPSitems=document.getElementsByClassName("browseitem");
+            var BPSindex=0;
+           
+            var slideshow=function(){
+            for(var i=0;i<BPSitems.length;i++){
+                BPSitems[i].style.display="none";
+            }
+            if(BPSindex+1==BPSitems.length){
+                BPSindex=0;
+            }
+            else {
+                BPSindex++;
+            }
+                BPSitems[BPSindex].style.display="block";
+                setTimeout(slideshow,3000);
+        
+        }
+        slideshow();
+        var getPin=document.getElementById("pin");
+        var x=getElementsByClassName("xcoor")[0];
+        var y=getElementsByClassName("ycoor")[0];
+        var movePin=function(){
+            getPin.style.visibility="visible";
+            for(var i=0;i<BPSitems.length;i++){
+            x[BPSindex].innerHTML;
+            y[BPSindex].innerHTML;
+            getPin.style.top=x+ "px";
+            getpin.style.left=y+"px";
+            
+         }
+         setTimeout(movePin,3000);
+    }
+    movePin();
+           
+        
+                </script>
+
+            <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
+                <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
+                <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
+                <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
+                <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
+            </footer>
+        </body>
+
+</html>

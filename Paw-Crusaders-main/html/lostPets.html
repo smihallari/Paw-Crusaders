@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lost Pets</title>
+    <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
+    <style>
+        body{
+            background-color:#9dade7 !important;
+        }
+        .petEx{
+        position:absolute;
+        height:250px;
+        width:450px;
+        }
+        .lostpetsslide{
+        position:absolute;
+        top:95px;
+        left:60%;
+        }
+        .species,.owner,.time,.size,.color,.name{
+            display:none;
+        }
+        #pin{
+	    position:absolute;
+	    visibility: hidden;
+	    z-index: 1;
+        }   
+        span>ul{
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            position:absolute;
+            right: 20%;
+            top:365px;
+        }
+        .map{
+        position:absolute;
+        top:110px;
+        left:10%; 
+        }
+        .speech{
+        position:absolute;
+        top:550px;
+        font-size:20px;
+        margin-left:15%;
+        border:5px dashed red;
+        padding:10px;   
+        background-color: rgb(172, 189, 236);
+        }
+    </style>
+    <script src="../other/button.js" defer></script>
+</head>
+
+<body style="background:#a4b0da ;">
+    <img id="logo" src="../images/Default_create_me_a_logo_for_my_pet_adopting_website_the_name_1_c86b53ab-5bf3-4d6d-b51b-7ed9afa81dab_0.png">
+    <nav>
+        <ul >
+            <li><a href="../index.html">Home</a></li>
+
+            <li class="popup"><a href="">Adoption</a>
+                
+                <ul class="dropdown">
+                    <li><a href="browsePets.html">Browse Pets</a></li>
+                    <li><a href="howToAdopt.html">How To Adopt</a></li>
+                    <li> <a href="adoptSuccesses.html">Successful Adoptions</a></li>
+                    <li><a href="adoptLocation.html">Adoption Centers</a></li>
+            </ul>
+            </li>
+
+            <li class="popup"><a href="">Resources</a>
+            <ul class="dropdown">
+                <li><a href="volunteer.html">Volunteering</a></li>
+                <li><a href="petCare.html">Pet Care</a></li>
+                <li><a href="petFriendlyServices.html">Pet-Friendly Services</a></li>
+                <li> <a href="petInsurance.html">Pet Insurance</a></li>
+                <li><a href="petBehaviourTips.html">Pet Behavior </a></li>
+            </ul></li>
+
+            <li class="popup"><a href="">More</a>
+                <ul class="dropdown">
+                    <li>  <a href="eventsPets.html">Events for pets</a></li>
+                    <li>    <a href="lostPets.html">Lost Pets</a></li>
+                    <li><a href="petMemorial.html">Pet Memorial</a></li>
+                    <li> <a href="petSell.html">Selling pets</a> </li>   
+                </ul></li>
+
+                <li class="popup"><a href="">Technical</a>
+                    <ul class="dropdown">
+                        <li> <a href="aboutUs.html">About Us</a></li>
+                        <li> <a href="faq.html">FAQ</a></li>
+                        <li> <a href="contactUs.html">Contact Us</a></li>
+                    </ul></li>
+
+            </ul></nav>
+            <div class="lostpetsslide">
+                <ul>
+                        <li class="browseitem">
+                            <span class="name">Jordy</span><span class="species">Dog</span><span class="color">Brown</span><span class="size">Average</span><span class="time">10:52AM 12.11.1996</span><span class="owner">306975761234</span>
+                            <span class="xcoor">150</span><span class="ycoor">200</span><img class="petEx" src="../images/free-photo-of-dogs-for-adoption.jpeg" ></li>
+                        <li class="browseitem"><span class="xcoor">50</span><span class="ycoor">150</span><img class="petEx" src="../images/pexels-photo-3790942.jpeg" ></li>
+                        <span class="name">Jack</span><span class="species">Dog</span><span class="color">Black and brown</span><span class="size">Small</span><span class="time">11:21AM 30.12.2023</span><span class="owner">306987694590</span>
+                        <li class="browseitem"><span class="xcoor">200</span><span class="ycoor">50</span><img class="petEx" src="../images/pexels-photo-7474348.jpeg" ></li>
+                        <span class="name">Jill</span><span class="species">Dog</span><span class="color">Cream</span><span class="size">Big</span><span class="time">05:24PM 10.11.2023</span><span class="owner">306984561546</span>
+                    </ul>
+                </div>
+                
+                <div class="map">
+                    <img src="../images/map.jpg" >
+                    <img src="../images/pin.png" id="pin">
+                </div>
+              
+                <span><ul>
+                    <li>Name: </li><li id="Name"></li>
+                    <li>Species: </li><li id="Species"></li>
+                    <li>Color:</li><li id="Color"></li>
+                    <li>Size: </li> <li id="Size"></li>
+                    <li>Time:</li><li id="Time"></li>
+                    <li>Owner Phone: </li><li id="Phone"></li>
+                </ul>
+                </span>
+                <div class="speech">Dear community,<br>
+
+                    Every lost pet has a story, and we believe in the power of community to rewrite those stories with happy endings. <br>
+                    Join us in our mission to reunite families with their beloved companions. <br>
+                    Explore the map, share our page, and be an advocate for the voiceless.
+                    <br> Together, we can bring comfort, hope, and wagging tails back to our neighborhoods.
+                    <br>Thank you for being a beacon of compassion.<br>
+                    Paw Crusaders</div>
+                    <footer style="position:absolute;bottom:0px;"> Join our socials :)&nbsp;&nbsp;&nbsp; 
+                        <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
+                        <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
+                        <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
+                        <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
+                    </footer>
+            <script>
+                var BPSitems=document.getElementsByClassName("browseitem");
+                var BPSindex=0;
+                var BPSxcoor=document.getElementsByClassName("xcoor");
+                var BPSycoor=document.getElementsByClassName("ycoor");
+                var getPin=document.getElementById("pin");
+                var getName=document.getElementsByClassName("name");
+                var getSpecies=document.getElementsByClassName("species");
+                var getColor=document.getElementsByClassName("color");
+                var getSize=document.getElementsByClassName("size");
+                var getTime=document.getElementsByClassName("time");
+                var getOwner=document.getElementsByClassName("owner");
+                var slideshow=function(){
+                    for(var i=0;i<BPSitems.length;i++){
+                        BPSitems[i].style.display="none";
+                    }
+                    if(BPSindex+1==BPSitems.length){
+                     BPSindex=0;
+                    }
+                    else {
+                     BPSindex++;
+                    }
+                    BPSitems[BPSindex].style.display="block";
+                    getPin.style.top=BPSxcoor[BPSindex].innerHTML+"px";
+                    getPin.style.left=BPSycoor[BPSindex].innerHTML+"px";
+                    getPin.style.visibility="visible";
+                   
+                    document.getElementById("Phone").innerHTML=getOwner[BPSindex].innerHTML;
+                    document.getElementById("Color").innerHTML=getColor[BPSindex].innerHTML;
+                    document.getElementById("Size").innerHTML=getSize[BPSindex].innerHTML;
+                    document.getElementById("Species").innerHTML=getSpecies[BPSindex].innerHTML;
+                    document.getElementById("Time").innerHTML=getTime[BPSindex].innerHTML;
+                    document.getElementById("Name").innerHTML=getName[BPSindex].innerHTML;
+                    console.log(getOwner[BPSindex]);
+                    console.log(document.getElementsByClassName("color")[BPSindex]);
+                    setTimeout(slideshow,7000);
+                    
+                }
+                slideshow();
+            </script>
+</body>
+
+</html>
