@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
 
 <head>
     <title> Contact Us</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
+    <script src="https://kit.fontawesome.com/14d0813ccb.js" crossorigin="anonymous"></script>
+    <style>
+        .contact{
+    color:aliceblue;
+    
+    margin-top:100px;
+}
+
+ .contact > h1 {
+    text-align: center;
+}
+#phone{
+    margin-top: 40px;
+    margin-left: 200px;
+    
+}
+#email{
+    margin-top: 40px;
+    margin-left: 430px;
+    
+}
+#location{
+    margin-top: 40px;
+    margin-left: 430px;
+}
+
+.phone-text{
+   
+    margin-left: 15%;
+    
+}
+.email-text{
+    
+    margin-left: 405px;
+    
+}
+.address-text{
+    
+    margin-left: 390px;
+}
+.phone-content{
+   
+    margin-left: 115px;
+    
+}
+.email-content{
+    
+    margin-left: 260px;
+    
+}
+.address-content{
+    
+    margin-left: 295px;
+}
+.phone-content1{
+   
+    margin-left: 165px;
+    
+}
+.email-content1{
+    
+    margin-left: 328px;
+    
+}
+.address-content1{
+    
+    margin-left: 20%;
+}
+.phone-content2{
+   
+    margin-left: 180px;
+   
+    
+}
+.message-us{
+    color:turquoise ;
+    float: left;
+    margin-top: 70px;
+    margin-left: 150px;
+
+}
+form{
+   float: right;
+   margin-top: 70px;
+   margin-right: 250px;
+   color:turquoise ;
+   
+}
+ input, textarea{
+    
+    width:400px;
+    background-color:white;
+} 
+#submitButton{
+    background-color: orange;
+    color: aliceblue;
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -48,12 +149,124 @@
                     </ul></li>
 
             </ul></nav>
-            <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
+            <div class="contact">
+                <h1>GET IN TOUCH</h1>
+                <i id="phone" class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>
+                <i id="email" class="fa-solid fa-message fa-2xl" style="color: #ffffff;"></i>
+                <i id="location" class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i><br>
+                <p> 
+                    <span class="phone-text">
+                    <strong>PHONE</strong>
+                    </span>
+
+                    <span class="email-text">
+                        <strong>EMAIL</strong>
+                    </span>
+
+                    <span class="address-text">
+                        <strong>ADDRESS</strong>
+                    </span>
+
+                 </p>
+
+                 <p> 
+                    <span class="phone-content">
+                    <strong>(Monday to Friday, 8am to 2pm)</strong>
+                    
+                    </span>
+
+                    <span class="email-content">
+                    <strong>Request for pet adoption:</strong>
+                    </span>
+
+                    <span class="address-content">
+                    <strong>Thessaloniki, Greece </strong> 
+                    </span>
+
+                 </p>
+
+                 <p> 
+                    <span class="phone-content1">
+                    Greece Toll-Free:
+                    
+                    </span>
+
+                    <span class="email-content1">
+                    petadoption@gmail.com
+                    </span>
+
+                    <span class="address-content1">
+                    Karaoli ke Dimitriou 121, Evosmos
+                    </span>
+
+                 </p>
+
+                 <p> 
+                    <span class="phone-content2">
+                    6999592139
+                    
+                    </span>
+
+                    
+
+                 </p>
+
+                 
+
+                 
+
+
+
+
+                
+                
+            
+            </div>
+            <div class="message-us">
+            <h1 >Message Us</h1>
+            <p >
+                For every question you have regarding pets (pet adoption,<br> 
+                pet care, pet insurance,pet behaviour, pet memorial), you<br>
+                can email us and our costumer service will respond as soon<br> 
+                as possible.
+
+            </p>
+        </div>
+
+            <form action="" method="post">
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName" required><br>
+
+                <label for="lastName">Last Name :</label><br>
+                <input type="text" id="lastName" name="lastName" required><br>
+
+                <label for="email">Email:</label><br>
+                <input type="text" id="firstName" name="firstName" required><br>
+
+                <label for="message">Message:</label><br>
+                <textarea type="message" id="message" name="message" rows="8" cols="30" required ></textarea><br>
+
+                <input id="submitButton" type="submit" value="Submit"> 
+
+
+                
+            </form>
+            <footer style="position:absolute;bottom:0px;"> Join our socials :)&nbsp;&nbsp;&nbsp; 
                 <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
                 <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
                 <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
                 <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
             </footer>
+      <script>
+        var clickButton = document.getElementById("submitButton");
+        var onClickButton = function(){
+            clickButton.textContent="Submited";
+        }
+        clickButton.addEventListener("click",onClickButton );
+      </script>      
+
+
+            
         </body>
 
 </html>
