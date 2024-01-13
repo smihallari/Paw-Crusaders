@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
+    <html style="height:fit-content">
 
 <head>
     <title>Behaviour Tips</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
+    <style>
+body {
+  font-family: 'Arial', sans-serif;
+  color: gray;
+}
+
+
+
+.behavior {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.common,
+.anomalous {
+  flex: 1;
+  background-color: white;
+  padding: 2%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2%;
+}
+.behavior-photos{
+    height: 300px;
+    border-radius: 250px;
+}
+.vs{
+      width: 5% ;
+      height: 5%;
+      background-color:rgb(207, 132, 35);
+      border-radius: 50%;
+      margin-top: 5%;
+      
+
+    
+}
+#vs-header{
+    text-align: center;
+    margin-top: 33%;
+    color:rgb(250, 5, 29);
+}
+
+.behavior-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  color:rgb(14, 133, 237);
+  
+}
+div>ul>li{
+    text-align:center;
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -48,6 +109,84 @@
                     </ul></li>
 
             </ul></nav><span id="space"></span>
+            <section class="behavior">
+                <div class="common">
+                    <h3>
+                        Common Pet Behavior
+
+                    </h3>
+                    <ul class="behavior-list">
+                        <li>
+                            <h4>Eating and Drinking</h4>
+                            <img src="../images/appetite.jpg" class="behavior-photos">
+                            <p>
+                            Common behavior involves regular eating and drinking habits,
+                            indicating a healthy appetite and hydration.
+                            </p>
+                        </li>
+                        <li>
+                            <h4> Playfulness</h4>
+                            <img src="../images/activePet.jpg" class="behavior-photos">
+                            <p>
+                             Common behavior includes engaging in playful activities,
+                            which are essential for mental stimulation and physical
+                            exercise.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Sleeping Patterns</h4>
+                            <img src="../images/normalSleeping.jpg" class="behavior-photos">
+                            <p>
+                            Normal sleeping patterns vary based on the pet's age but 
+                            generally involve consistent and restful sleep, contributing
+                            to overall well-being
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="vs">
+                    <h1 id="vs-header">
+                        vs
+                    </h1>
+                </div>
+                <div class="anomalous">
+                    <h3>
+                        Anomalous Pet Behavior
+
+                    </h3>
+                    <ul class="behavior-list">
+                        <li>
+                            <h4>Changes in Eating Habits</h4>
+                            <img src="../images/noAppetite.jpg" class="behavior-photos">
+                            <p>
+                            Anomalous behavior may manifest as sudden changes in eating habits,
+                            such as loss of appetite or excessive thirst, which could indicate 
+                            underlying health issues.
+                            </p>
+                        </li>
+                        <li>
+                            <h4> Excessive Lethargy</h4>
+                            <img src="../images/notActivePet.jpg" class="behavior-photos">
+                            <p>
+                            Unexplained lethargy or lack of interest in activities may be 
+                            anomalous, suggesting illness, pain, or emotional distress.
+                            </p>
+                        </li>
+                        <li>
+                            <h4> Altered Sleeping Patterns</h4>
+                            <img src="../images/notNormalSleeping.jpg" class="behavior-photos">
+                            <p>
+                            Anomalous sleeping patterns, such as insomnia or excessive sleep,
+                            may signal stress, discomfort, or health problems that require
+                            attention.
+                            </p>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </section>
             <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
                 <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
                 <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
