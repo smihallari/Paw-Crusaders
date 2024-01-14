@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html>
+    <html style="height:fit-content">
 
 <head>
     <title>Pet Insurance</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
+    <script src="https://kit.fontawesome.com/14d0813ccb.js" crossorigin="anonymous"></script>
+    <style>
+        .insurance{
+        font-family: 'Arial', sans-serif;
+        color: gray;
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-around;
+        padding: 2%;
+        }
+        .pet-insurance, .purpose{
+        flex: 1;
+        background-color: white;
+        padding: 2%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 2%;
+        }
+        .insurance-header{
+            color:rgb(14, 133, 237); 
+        }
+        #heart{
+            position: absolute;
+            top:26%;
+            left:24.5%;
+        }
+        #check{
+            position: absolute;
+            top:26%;
+            right:24.5%;
+        }
+        #insurance-photo{
+            margin-left: 2%;
+            margin-top: 4%;
+            margin-bottom: 2%;
+            float: left;
+            height: 820.5px;
+            width: 550px;
+
+        }
+        .services{
+            margin-top: 4%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            font-family: 'Arial', sans-serif;
+            color: gray;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 2%;
+        }
+        div>ul>li{
+            list-style: none;
+        }
+
+    </style>
+
+    
 </head>
 
 <body>
@@ -48,6 +108,139 @@
                     </ul></li>
 
             </ul></nav>
+            <i class="fa-solid fa-heart-pulse fa-beat-fade fa-2xl" style="color: #e6180a;" id="heart"></i>
+            <i class="fa-solid fa-circle-check fa-beat-fade fa-2xl" style="color: #e6180a;" id="check"></i>
+            <section class="insurance">
+                <div class="pet-insurance">
+                    <h3 class="insurance-header">
+                        WHAT IS PET INSURANCE?
+
+                    </h3>
+                    <h4>
+                        Let us help you understand the concept of pet insurance
+
+                    </h4>
+                    <p>
+                        Pet insurance is a valuable financial tool designed to provide pet owners
+                        with peace of mind and financial security when it comes to their furry 
+                        companions' healthcare needs. Just like health insurance for humans, pet
+                        insurance helps cover veterinary expenses, ensuring that the cost of 
+                        unexpected illnesses, accidents, or routine preventive care doesn't become
+                        a burden. With a variety of plans available, pet insurance typically reimburses
+                        a percentage of eligible veterinary bills, including surgeries, medications,
+                        diagnostic tests, and even emergency treatments. This allows pet owners to
+                        prioritize their pets' well-being without facing the dilemma of choosing between 
+                        their beloved animal's health and their budget. Whether it's a mischievous puppy, 
+                        a senior cat, or any other pet in between, having pet insurance provides an added 
+                        layer of protection and fosters a stronger bond between pets and their owners by
+                        ensuring that optimal healthcare is always within reach.
+
+                    </p>
+
+                </div>
+                <div class="purpose">
+                    <h3 class="insurance-header">
+                        PURPOSE OF PET INSURANCE
+
+                    </h3>
+                    <h4>
+                       We want to make this clear for you 
+                    </h4>
+                    <p>
+                        
+                    The purpose of pet insurance is to safeguard the well-being of our cherished animal
+                    companions by alleviating the financial strain associated with veterinary care. It
+                    serves as a crucial resource for pet owners who want to ensure that their pets 
+                    receive the best possible medical attention without compromising on quality due to 
+                    cost concerns. Pet insurance plans are designed to cover a range of expenses, including 
+                    veterinary visits, surgeries, medications, and emergency treatments, helping pet parents
+                    manage unforeseen health issues. By providing financial support, pet insurance promotes
+                    responsible pet ownership, encouraging regular veterinary check-ups and preventive care. 
+                    Ultimately, the purpose of pet insurance is to empower pet owners to make decisions based
+                    on their pets' health needs rather than financial constraints, fostering a happier,
+                    healthier, and more secure bond between pets and their human companions.
+
+                    </p>
+
+                </div>
+            </section>
+            <img src="../images/insuranceServices.jpg" id="insurance-photo">
+            <section class="services">
+                <div>
+                <h3 class="insurance-header">
+                    WHAT SERVICES DOES OUR PET INSURANCE INCLUDE?
+                </h3>
+                
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-square-check fa-flip fa-xl" style="color: #fa0000;"></i>
+                            <h4>
+                                Accident Coverage
+                            </h4>
+                            <p>
+                                
+                            This service provides financial protection for unexpected 
+                            injuries resulting from accidents, such as fractures, cuts,
+                            or ingestions of harmful substances. It ensures that the costs 
+                            associated with emergency veterinary care are covered.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-square-check fa-flip fa-xl" style="color: #fa0000;"></i>
+                            <h4>
+                                Illness Coverage
+                            </h4>
+                            <p>
+                            Comprehensive coverage for veterinary expenses related to illnesses,
+                            ranging from common ailments to chronic conditions. This service 
+                            supports the treatment and management of various health issues to 
+                            keep your pet in optimal condition.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-square-check fa-flip fa-xl" style="color: #fa0000;"></i>
+                            <h4>
+                                Routine Wellness Exams
+                            </h4>
+                            <p>
+                                Many pet insurance plans offer coverage for routine check-ups
+                                and preventive care, encouraging regular veterinary visits. 
+                                This can include vaccinations, dental cleanings, and screenings 
+                                to maintain your pet's overall health.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-square-check fa-flip fa-xl" style="color: #fa0000;"></i>
+                            <h4>
+                                Prescription Medications
+                            </h4>
+                            <p>
+                                
+
+                                Assistance with the cost of prescribed medications, ensuring that
+                                your pet has access to the necessary drugs for recovery or
+                                long-term health management.
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-square-check fa-flip fa-xl" style="color: #fa0000;"></i>
+                            <h4>
+                                Surgery Coverage
+                            </h4>
+                            <p>
+                                Financial support for surgical procedures, whether planned or 
+                                emergent. This service helps pet owners manage the costs of 
+                                surgeries, including post-operative care
+                            </p>
+                        </li>
+
+                    </ul>
+
+                
+            </div>
+            </section>
+
+            
             
             
             <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
