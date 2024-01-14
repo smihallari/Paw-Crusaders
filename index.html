@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!-- 
+    Hello, I am Stefano Mihallari and this is one of the pages I worked on for my website. I have chosento pursue the  Computer Science route in University of York 
+because I am passionte and enjoy doing it, namely discovering problems, figuring solutions out and then coding them.As a student I always aim to better myself and arm myself with
+sharper weapons regarding the coding world.What I want to do in CS lies unsolved between Cybersecurity and Data Science.Outside of school, my hobbies lie in both playing
+and watching the gaming world,particularly FPS games such as Counter Strike(https://www.counter-strike.net/cs2) and I also enjoy playing football, the team I support is 
+Real Madrid(https://www.realmadrid.com/en-US). Whether it is coding late into the night while enjoying home-cooked meals next to a fireplace, or the excitement within me when my team
+wins a match, I have tried to showcase it through my work in the website. Creating a pet adopting website as a means to help our friends in need employs both my self-reflection
+as a person and hopefully a sweet glimpse at the beggining of my journey as a programmer. Feel free to dabble with anything you like :)
+-->
 <html style="height: fit-content;">
 <head>
     <title>Pet Adopting</title>
@@ -13,7 +22,6 @@
         height:380px;
         width:550px;
         border-radius: 50px;
-        /* margin-right:40px; */
     }
     .clickbrowse{
         display:flex;
@@ -23,10 +31,10 @@
         background-color: #f065f0;
         width:550px;
         height:50px;
-        /* margin-left:40px; */
         justify-content: space-between;
         border-end-start-radius: 50px;
         border-end-end-radius: 50px;
+        /* simple aplication of border-radius */
     }
     .button{
         margin-top:5px;
@@ -38,6 +46,7 @@
     }
     .button:hover{
         cursor: pointer;
+        /* make the cursor show that the item is clickable */
     }
     .successphoto{
         height:300px;
@@ -53,7 +62,8 @@
     background-color: purple;
     height:400px;
     margin:50px 0;
-    background: linear-gradient(to right, transparent, 40%, purple, 60%, transparent);  
+    background: linear-gradient(to right, transparent, 40%, purple, 60%, transparent); 
+     /* Using gradient[2] */
     content:"";
     }
     #browsepara{
@@ -70,7 +80,9 @@
         float:left;
         opacity:0;
         transform: translateX(100%);
+        /* using transform property [5] */
         transition: transform 4s ease-in-out, opacity 1.5s ease-in-out
+        /* using transition [6] */
     }
     #sucpara{
         
@@ -87,6 +99,7 @@
         height:70px;
         justify-content: space-evenly;
         background: linear-gradient(to right, transparent, 35%, #234ce0, 65%, transparent); 
+        /* Using gradient[2] */
     
     }
     #scrollinfo{
@@ -95,12 +108,10 @@
         height:100px;
         justify-content: space-evenly;
         background: linear-gradient(to right, transparent, 35%, #234ce0, 65%, transparent);  
-    }
+    }   /* Using gradient[2] */
     .spannum{
         font-size:50px;
         color:white;
-        /* -webkit-text-stroke: 1px black;
-        text-stroke: 1px black; */
     }
     .spaninfo{
         font-size:30px;
@@ -112,25 +123,22 @@
         border-radius: 50px;
     }
     #voldiv{
-   
         display: flex;
         justify-content: center;
         align-items: center;
         margin:50px;
         transition: opacity 1s ease-in-out;
+        /* using transition [6] */
     }
     
     #space{
         padding-top:10px;
     }
     #insurancediv{
-        /* height:300px; */
         display:flex;
         margin:50px;
         justify-content:center;
         align-items:center;
-        
-       
     }
     #ins1{
         height:300px;
@@ -140,6 +148,7 @@
         -webkit-mask-image: linear-gradient(to left, white 60%,black);
         mask-image: linear-gradient(to left, white 60%, black);
         mask-mode: luminance;
+        /* using mask image to create a fade effect [7] */
     }
     #ins2{
         height:300px;
@@ -149,6 +158,8 @@
         -webkit-mask-image: linear-gradient(to right, white 60%,black);
         mask-image: linear-gradient(to right, white 60%, black);
         mask-mode: luminance;
+                /* using mask image to create a fade effect [7] */
+
         
     }
     #insspan{
@@ -287,7 +298,7 @@
                     BPSitems[BPSindex].style.display="block";
                     setTimeout(slideshow,6000);
             
-            }
+            }//slideshow like it was demonstrated in the lab sessions.
             slideshow();
             document.addEventListener("DOMContentLoaded",function(){
                 var throwListItem=document.querySelectorAll(".throwli");
@@ -299,11 +310,11 @@
                             li.style.transform="translateX(0)";
                         });
                     });
-                });
+                });// Throwing the li's to the right using requestAnimation Frame, while simoultanously upping their opacity using transition for a smooth show. [4]
                 var num1=0;
                 var num2=0;
                 var num3=0;
-            
+                
             function increase(){
             var spannum=document.getElementsByClassName("spannum");
             var scrollage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
@@ -316,7 +327,7 @@
             },30);
             window.removeEventListener('scroll',increase);}}
             window.addEventListener('scroll',increase);
-            AOS.init();
+            AOS.init();//Using AOS we create a fade up effect[3]
             </script>
     </body>
 </html>
