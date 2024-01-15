@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <html style="height:fit-content">
+    <html style="height:cover">
 <head>
     <title>Pet Friendly Servies</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
@@ -30,26 +30,28 @@
         z-index: 1;
         }   
         .map{
-        float:right;
-        
+        position:absolute;
+        left: 45%;
+        top: 40%;
         margin-right:8%;
         margin-left:5%; 
         margin-bottom: 3%;
         
-        
         }
         .petEx{
         position:absolute;
+        left: 15%;
+        top: 40%;
         height:350px;
         width:450px;
-        left: 8%;
-        top: 62.5%;
         
         }
         .text{
             position: absolute;
-            margin-top: 16.5%;
-            margin-left: 5%;
+            left:20%;
+            top:80%;
+            font-size: 30px;
+            
         }
         span>ul{
             display: grid;
@@ -122,38 +124,38 @@
                 <ul>
                     
                     <li class="browseitem">
-                        <span class="xcoor">550</span>
-                        <span class="ycoor">750</span>
+                        <span class="xcoor">50</span>
+                        <span class="ycoor">250</span>
                         <img class="petEx" src="../images/petHotel.png" >
                         <span class="text">ON Residence</span>
                         </li>
                     <li class="browseitem">
-                        <span class="xcoor">450</span>
-                        <span class="ycoor">850</span>
+                        <span class="xcoor">60</span>
+                        <span class="ycoor">150</span>
                         <img class="petEx" src="../images/petAtVet.jpg" >
                         <span class="text">Pet Care Center</span>
                     </li>
                     <li class="browseitem">
-                        <span class="xcoor">400</span>
-                        <span class="ycoor">750</span>
+                        <span class="xcoor">70</span>
+                        <span class="ycoor">100</span>
                         <img class="petEx" src="../images/petSitter.jpg" >
                         <span class="text">Thessaloniki Pet Sitting</span>
                     </li>
                     <li class="browseitem">
-                        <span class="xcoor">510</span>
-                        <span class="ycoor">950</span>
+                        <span class="xcoor">70</span>
+                        <span class="ycoor">450</span>
                         <img class="petEx" src="../images/petHotel1.jpg" >
                         <span class="text">ONOMA Hotel</span>
                     </li>
                     <li class="browseitem">
-                        <span class="xcoor">600</span>
-                        <span class="ycoor">1150</span>
+                        <span class="xcoor">40</span>
+                        <span class="ycoor">200</span>
                         <img class="petEx" src="../images/petPersonalTrainer.jpg" >
                         <span class="text">Dog Trainer School</span>
                     </li>
                     <li class="browseitem">
-                        <span class="xcoor">400</span>
-                        <span class="ycoor">1100</span>
+                        <span class="xcoor">70</span>
+                        <span class="ycoor">300</span>
                         <img class="petEx" src="../images/petRestaurant.jpg" >
                         <span class="text">Panorama Bar&Restauranr</span>
                     </li>
@@ -164,13 +166,18 @@
                 <img src="../images/map.jpg" >
                 <img src="../images/pin.png" id="pin">
                 </div>
-           
+                <footer style="position: absolute;bottom:0px;"> Join our socials :)&nbsp;&nbsp;&nbsp; 
+                    <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
+                    <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
+                    <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
+                    <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
+                </footer>
         <script>
             var BPSitems=document.getElementsByClassName("browseitem");
             var getPin=document.getElementById("pin");
             var BPSindex=0;
             var BPSxcoor=document.getElementsByClassName("xcoor");
-                var BPSycoor=document.getElementsByClassName("ycoor");
+            var BPSycoor=document.getElementsByClassName("ycoor");
             var slideshow=function(){
                     for(var i=0;i<BPSitems.length;i++){
                         BPSitems[i].style.display="none";
@@ -185,7 +192,7 @@
                     getPin.style.top=BPSxcoor[BPSindex].innerHTML+"px";
                     getPin.style.left=BPSycoor[BPSindex].innerHTML+"px";
                     getPin.style.visibility="visible";
-                    setTimeout(slideshow,1000);
+                    setTimeout(slideshow,5000);
                     
                 }
                 slideshow();
@@ -193,12 +200,7 @@
         
                 </script>
 
-            <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
-                <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
-                <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
-                <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
-                <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
-            </footer>
+           
         </body>
 
 </html>
