@@ -1,10 +1,34 @@
 <!DOCTYPE html>
+<!--  I am Joana and I am  interested in computer science because I think technology has a lot of potential to spur innovation and 
+                    provide solutions to pressing issues. My motivation to learn more about the complexities of this field comes
+                    from the limitless possibilities that come with coding and creating software.
+                -->
 <html>
 
 <head>
     <title>Adopt Application</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
+    <style>
+        
+        h1 {
+            color: rgb(12, 6, 22);
+        }
+        h4 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+        .class1{
+
+            text-align: left;
+        }
+        .cont{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -48,13 +72,48 @@
                     </ul></li>
 
             </ul></nav>
-    <header>
-        <h1>Browse Available Pets</h1>
-        <!-- Navigation links can be added here -->
-    </header>
-    <main>
-        <!-- Pet listings and filters go here -->
-    </main>
+            <div class="cont">
+                <form action="">
+                    <h1>Please fill out the form</h1>
+                    <div class="class1">
+                        
+                            <p><label for="Email">Email adress</label>
+                            <input type="email" id="Email adress"> </p>
+                            <p>Name&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Name"></p>
+                            <p> Family name <input type="text" name="Family name"> </p>
+                            <p><label for="Year of birth"> Year of birth&nbsp; </label>
+                            <input type="date" id="Year of birth"> </p> <br>
+                            <h4> What is your current living situation? </h4> 
+                            <p><label for="Apartament">Apartament</label>
+                            <input type="radio" name="CurrentLiving" id="Apartament"> <br>
+                            <label for="House">House</label>
+                            <input type="radio" name="CurrentLiving" id="House"></p>
+                            <h4>What animal do you want to adopt? </h4>
+                            <p><label for="Dog">Dog</label>
+                            <input type="checkbox"> <br>
+                            <label for="Cat">Cat</label>
+                            <input type="checkbox"><br> </p>
+                            <h4>Have you owned pets before? </p><h4>
+                            <p><label for="Yes">Yes</label>
+                            <input type="radio" name="Before" id="Yes"> <br>
+                            <label for="No">No</label>
+                            <input type="radio" name="Before" id="No">  </p>
+                            <h4>Are you financially prepared for the costs associated with pet ownership, including veterinary care and food? </h4>
+                            <p><label for="Yes">Yes</label>
+                            <input type="radio" name="FinanciallyPrepared" id="Yes"> <br>
+                            <label for="No">No</label>
+                            <input type="radio" name="FinanciallyPrepared" id="No"> </p>
+                            <h4>Are you willing to provide regular veterinary care, including vaccinations, spaying/neutering, and preventive medications? </h4>
+                            <p><label for="Yes">Yes</label>
+                            <input type="radio" name="ProvideCare" id="Yes"> <br>
+                            <label for="No">No</label>
+                            <input type="radio" name="ProvideCare" id="No"> </p>
+                            <p>Describe your living environment, including any outdoor space and nearby parks <br>
+                            <input size="75%" type="text" name="Write"></p> 
+                            <input type="submit">
+                    </div>
+                </form>
+            </div>
     <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
         <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
         <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>

@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<!-- 
+    Hello, I am Megi Gramozi.I am born on 25.08.2005 and I am Albanian.I have decided to pursue Computer Science because it is very interesting and a very creative subject(to be honest it pays well too hahaha).The music I enjoy is jazz,techno and pop music.Long walks aside the sea are my favourite hing to do in my free time.Having a positive attitude and being social and genuine are the things I love the most about myself:)
+-->
+<html style="height:fit-content">
 
 <head>
+  <style>
+    .slideshow-container{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width:100%;
+      
+    }
+    .next,.prev{
+      text-align:center;
+      font-size:40px;
+      color:white;
+      cursor: pointer;
+    }
+  </style>
     <title>Browse Pets</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
 </head>
 
-<body>
+<body style="background: linear-gradient(to bottom,#d1d6ec,10%, #3f66f3);">
     <img id="logo" src="../images/Default_create_me_a_logo_for_my_pet_adopting_website_the_name_1_c86b53ab-5bf3-4d6d-b51b-7ed9afa81dab_0.png">
     <nav>
         <ul >
@@ -48,13 +66,49 @@
                     </ul></li>
 
             </ul></nav>
-    <header>
-        <h1>Browse Available Pets</h1>
-        <!-- Navigation links can be added here -->
-    </header>
-    <main>
-        <!-- Pet listings and filters go here -->
-    </main>
+            <header>
+                <h1 style="text-align:center;color:white">Browse Available Pets</h1>
+            </header>
+            <main>
+
+        <p style="text-align:center;font-size:40px;color:white">Available dogs:</p>
+        <div class="slideshow-container">
+          <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+          <div class="mySlides1">
+            <img src ="../images/dog1.jpg" style="width:500px; border-radius: 60px;" >
+          </div>
+        
+          <div class="mySlides1">
+            <img src="../images/dog2.jpg" style="width:500px; border-radius: 60px;" >
+          </div>
+        
+          <div class="mySlides1">
+            <img src="../images/dog3.jpg"style="width:500px; border-radius: 60px;" >
+          </div>
+        
+     
+          <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+        
+        <p style="text-align:center;font-size:40px;color:white">Available cats:</p>
+        <div class="slideshow-container">
+          <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+          <div class="mySlides2">
+            <img src="../images/cat1.jpg" style="width:500px; border-radius: 60px;" >
+          </div>
+        
+          <div class="mySlides2">
+            <img src="../images/cat2.jpg" style="width:500px; border-radius: 60px;" >
+          </div>
+        
+          <div class="mySlides2">
+            <img src="../images/cat3.jpg" style="width:500px; border-radius: 60px;" >
+          </div>
+        
+         
+          <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        </div>
+            </main>
     <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
         <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
         <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>

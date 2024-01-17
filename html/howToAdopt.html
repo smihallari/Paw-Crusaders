@@ -1,9 +1,43 @@
 <!DOCTYPE html>
+<!-- 
+    Hello, I am Megi Gramozi.I am born on 25.08.2005 and I am Albanian.I have decided to pursue Computer Science because it is very interesting and a very creative subject(to be honest it pays well too hahaha).The music I enjoy is jazz,techno and pop music.Long walks aside the sea are my favourite hing to do in my free time.Having a positive attitude and being social and genuine are the things I love the most about myself:)
+-->
 <html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
     <script src="../other/button.js" defer></script>
+    <style>
+        .text-overlay{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            color:#fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h1{
+            color:white;
+            text-align: center;
+            text-shadow: 1px 1px 1px black,  0 0 25px blue, 0 0 5px darkblue;
+        }
+        .video-container{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            overflow: hidden;
+        }
+        #video-bg{
+            width:100%;
+            height:100%;
+            object-fit: cover; 
+        }
+        
+    </style>
 <title>How to Adopt</title>
 </head>
 
@@ -42,7 +76,20 @@
                         <li> <a href="contactUs.html">Contact Us</a></li>
                     </ul></li>
             </ul></nav>
-            <footer> Join our socials :)&nbsp;&nbsp;&nbsp; 
+            <h1 class="h1">How to adopt a pet?</h1>
+     <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="../images/video%20(1080p).mp4" type="video/mp4">
+           
+        </video>
+        <div class="text-overlay">  <ol >
+    <li>First choose the pet you want to adopt.The options we have are in the <a href="browsePets.html" >Browse pets</a> section</li>
+    <li>Then you fill the form with the information that is needed</li>
+    <li>If we see you as an appropriate adopter we will contact you in one of our social media to leave a face to face meeting date to our store</li>
+    <li>In the end if anything goes well you will be a pet adopter:)</li>
+               </ol></div>
+    </div>
+            <footer style="position: absolute;bottom:0px;"> Join our socials :)&nbsp;&nbsp;&nbsp; 
                 <a target="_blank" href="https://instagram.com">  <img class= "footerimg" src="../images/instagram-removebg-preview.png"></a>
                 <a target="_blank"href="https://linkedin.com">  <img class= "footerimg" src="../images/1000_F_396561934_t1OwjMZHrVY211bHA5uUEAix0F1SyLci-removebg-preview.png"></a>
                 <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
