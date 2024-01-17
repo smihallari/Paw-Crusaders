@@ -27,9 +27,6 @@
     margin-top:5%;
 }
 
- .contact > h1 {
-    text-align: center;
-}
 .message-us{
     color:turquoise ;
     float: left;
@@ -56,9 +53,16 @@ form{
 
 .divs{
     display: flex;
-    justify-content:space-around;
+    flex-direction: column;
+    
 }
-
+.divs>span{
+    padding-top:36px;
+}
+.bigdiv{
+    display:flex;
+    justify-content: space-evenly;
+}
     </style>
 </head>
 
@@ -103,50 +107,49 @@ form{
                     </ul></li>
 
             </ul></nav>
+            <h1 style="text-align:center;padding-bottom:10px;color:white">GET IN TOUCH</h1>
+            <div class="bigdiv">
             <div class="divs">
-                <h1>GET IN TOUCH</h1>
+                
                 <i id="phone" class="fa-solid fa-phone fa-2xl" style="color: #ffffff;"></i>
-                <i id="email" class="fa-solid fa-message fa-2xl" style="color: #ffffff;"></i>
-                <i id="location" class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i><br>
-                    </div><div class="divs">
-                    <span class="phone-text">
-                    <strong>PHONE</strong>
-                    </span>
-
-                    <span class="email-text">
-                        <strong>EMAIL</strong>
-                    </span>
-
-                    <span class="address-text">
-                        <strong>ADDRESS</strong>
-                    </span>
-                </div><div class="divs">
-                    <span class="phone-content">
-                    <strong>(Monday to Friday, 8am to 2pm)</strong>
-                    
-                    </span>
-
-                    <span class="email-content">
-                    <strong>Request for pet adoption:</strong>
-                    </span>
-
-                    <span class="address-content">
-                    <strong>Thessaloniki, Greece </strong> 
-                    </span>
-                </div><div class="divs">
-                    <span class="phone-content1">
+                <span>
+                    <strong style="color:white">PHONE</strong>
+                    </span><span>
+                        <strong style="color:white">(Monday to Friday, 8am to 2pm)</strong>
+                        
+                        </span><span>
+                        <strong style="color:white">
                         6999592139
+                        </strong>
+                        </span>
+                
+                
+                    </div><div class="divs">
+                     <i id="email" class="fa-solid fa-message fa-2xl" style="color: #ffffff;"></i>
+
+                     <span>
+                        <strong style="color:white">EMAIL</strong>
+                    </span>
+                    <span>
+                        <strong style="color:white">Request for pet adoption:</strong>
+                        </span>
+                        <span>
+                            <strong style="color:white"> petadoption@gmail.com</strong>
+                            </span>
                     
+                </div><div class="divs">
+                    <i id="location" class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i>
+
+                    <span>
+                        <strong style="color:white">ADDRESS</strong>
                     </span>
 
-                    <span class="email-content1">
-                    petadoption@gmail.com
+                    <span>
+                        <strong style="color:white">Thessaloniki, Greece </strong> 
                     </span>
-
-                    <span class="address-content1">
-                    Karaoli ke Dimitriou 121, Evosmos
-                    </span>
-
+                    <span>
+                        <strong style="color:white">Karaoli ke Dimitriou 121, Evosmos</strong>
+                        </span>
                 </div>
                    
                
