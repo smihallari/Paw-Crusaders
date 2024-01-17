@@ -19,6 +19,11 @@
       color:white;
       cursor: pointer;
     }
+    .slimg{
+      cursor:pointer;
+      width:500px; 
+      border-radius: 60px;
+    }
   </style>
     <title>Browse Pets</title>
     <link rel="stylesheet" type="text/css" href="../other/mystyle.css">
@@ -75,15 +80,15 @@
         <div class="slideshow-container">
           <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
           <div class="mySlides1">
-            <img src ="../images/dog1.jpg" style="width:500px; border-radius: 60px;" >
+            <img src ="../images/dog1.jpg" class="slimg" >
           </div>
         
           <div class="mySlides1">
-            <img src="../images/dog2.jpg" style="width:500px; border-radius: 60px;" >
+            <img src="../images/dog2.jpg" class="slimg">
           </div>
         
           <div class="mySlides1">
-            <img src="../images/dog3.jpg"style="width:500px; border-radius: 60px;" >
+            <img src="../images/dog3.jpg"class="slimg">
           </div>
         
      
@@ -94,15 +99,15 @@
         <div class="slideshow-container">
           <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
           <div class="mySlides2">
-            <img src="../images/cat1.jpg" style="width:500px; border-radius: 60px;" >
+            <img src="../images/cat1.jpg" class="slimg">
           </div>
         
           <div class="mySlides2">
-            <img src="../images/cat2.jpg" style="width:500px; border-radius: 60px;" >
+            <img src="../images/cat2.jpg" class="slimg">
           </div>
         
           <div class="mySlides2">
-            <img src="../images/cat3.jpg" style="width:500px; border-radius: 60px;" >
+            <img src="../images/cat3.jpg" class="slimg">
           </div>
         
          
@@ -115,6 +120,14 @@
         <a target="_blank"href="https://facebook.com"><img class="footerimg" src="../images/63a231592efca78f2bcbc02267eb37be-removebg-preview.png"></a>
         <a target="_blank"href="https://tiktok.com"> <img class="footerimg" src="../images/Logo-of-the-tiktok-app-on-transparent-background-PNG-removebg-preview.png"></a>
     </footer>
+    <script>
+      var images=document.getElementsByTagName('img');
+      for(var i=0;i<images.length;i++){
+      images[i].addEventListener('click',function(){
+        window.location.href='adoptApplication.html';
+      })}
+      
+    </script>
 </body>
 
 </html>
